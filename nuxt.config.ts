@@ -20,4 +20,9 @@ export default defineNuxtConfig({
     },
   },
   supabase: { redirect: false },
+  app: {
+    head: {
+      title: "FoodPay",
+    },
+  },
 });
