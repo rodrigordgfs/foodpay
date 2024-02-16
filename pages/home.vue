@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-full h-screen pb-[65px] px-2">
+  <div class="flex flex-col w-full h-screen px-2">
     <div class="flex flex-row w-full items-center justify-between py-2">
       <LocationSearch />
       <div
@@ -47,6 +47,7 @@
     <HomeSpecialOffers />
     <HomeFoodCategory />
     <HomePopularFood />
+    <HomeRestaurants />
   </div>
 </template>
 

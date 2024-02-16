@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pb-[70px]">
     <slot />
     <BottomNavigation />
   </div>
