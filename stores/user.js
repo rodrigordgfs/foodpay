@@ -7,10 +7,10 @@ export const useUserStore = defineStore("user", {
     user: null,
   }),
   actions: {
-    async signIn(email, password) {
+    async login(email, password) {
       const client = useSupabaseClient();
 
-      const { data, error } = await client.auth.signInWithPassword({
+      const { error } = await client.auth.signInWithPassword({
         email,
         password,
       });
@@ -19,8 +19,32 @@ export const useUserStore = defineStore("user", {
         alert(error.message);
         return;
       }
+    },
+
+    async register(name, email, password) {
+      const client = useSupabaseClient();
+      const router = useRouter();
+
+      const { data, error } = await client.auth.signUp({
+        email,
+        password,
+        options: {
+          data: {
+            name,
+          },
+        },
+      });
+
+      if (error) {
+        alert(error.message);
+        return;
+      }
 
       this.user = data;
+
+      router.push({
+        name: "Home",
+      });
     },
   },
 });
