@@ -43,6 +43,8 @@
         />
       </div>
     </div>
+
+    <HomeSpecialOffers />
   </div>
 </template>
 
