@@ -8,7 +8,7 @@
         Ver todos
       </button>
     </div>
-    <div class="grid grid-cols-3 gap-2 w-full">
+    <div class="grid grid-cols-3 gap-2 w-full mb-20">
       <div
         v-for="restaurant in rastaurants"
         :key="restaurant"
