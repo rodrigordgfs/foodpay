@@ -35,18 +35,21 @@
 <script setup>
 const offers = ref([
   {
-    title: "Combo de pizza",
-    image: "https://via.placeholder.com/150",
+    title: "Xis Tudo",
+    image:
+      "https://img.freepik.com/fotos-gratis/hamburguer-de-vista-frontal-em-um-carrinho_141793-15542.jpg",
     discount: 20,
   },
   {
-    title: "Combo de pizza",
-    image: "https://via.placeholder.com/150",
+    title: "Batata Frita",
+    image:
+      "https://img.freepik.com/fotos-gratis/batatas-fritas-crocantes-com-ketchup-e-maionese_1150-26588.jpg",
     discount: 20,
   },
   {
-    title: "Combo de pizza",
-    image: "https://via.placeholder.com/150",
+    title: "Combo Total",
+    image:
+      "https://img.freepik.com/fotos-gratis/alto-angulo-de-fast-food-na-mesa-branca_23-2148273120.jpg",
     discount: 20,
   },
 ]);
