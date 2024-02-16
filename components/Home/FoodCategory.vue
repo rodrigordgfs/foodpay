@@ -3,7 +3,7 @@
     <div class="flex flex-row items-center justify-between">
       <h2 class="text-lg font-bold">Categorias</h2>
       <button
-        class="text-zinc-500 rounded-lg py-1 px-3 font-semibold hover:text-orange-500 transition-all"
+        class="text-zinc-500 rounded-lg py-1 px-3 font-semibold text-sm hover:text-orange-500 transition-all"
       >
         Ver todos
       </button>
@@ -17,11 +17,13 @@
         <img
           :src="offer.image"
           alt="offer.title"
-          class="rounded-t-lg object-cover max-h-16 h-full"
+          class="rounded-t-lg object-cover max-h-16 h-16"
         />
-        <h3 class="text-xs font-semibold text-center p-2 text-white">
-          {{ offer.title }}
-        </h3>
+        <div class="flex-1 flex flex-row items-center justify-center">
+          <h3 class="text-xs font-semibold p-2 text-center text-white">
+            {{ offer.title }}
+          </h3>
+        </div>
       </div>
     </div>
   </div>

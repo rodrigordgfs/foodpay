@@ -3,7 +3,7 @@
     <div class="flex flex-row items-center justify-between">
       <h2 class="text-lg font-bold">Ofertas especiais</h2>
       <button
-        class="text-zinc-500 rounded-lg py-1 px-3 font-semibold hover:text-orange-500 transition-all"
+        class="text-zinc-500 rounded-lg py-1 px-3 font-semibold text-sm hover:text-orange-500 transition-all"
       >
         Ver todos
       </button>
