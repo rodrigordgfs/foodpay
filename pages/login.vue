@@ -29,6 +29,7 @@
               type="email"
               class="w-full bg-transparent outline-none h-12 placeholder:text-zinc-500"
               placeholder="E-mail"
+              autocomplete="email"
               v-model="form.email"
               @change="v$.email.$touch"
             />
@@ -60,6 +61,7 @@
               :type="passwordType"
               class="w-full bg-transparent outline-none h-12 placeholder:text-zinc-500"
               placeholder="Senha"
+              autocomplete="current-password"
               v-model="form.password"
               @change="v$.password.$touch"
             />
@@ -133,6 +135,8 @@ definePageMeta({
   name: "Login",
 });
 
+const userStore = useUserStore();
+
 const form = ref({
   email: "",
   password: "",
@@ -162,10 +166,10 @@ const rules = computed(() => {
 
 const v$ = useVuelidate(rules, form);
 
-const handleSubmitForm = () => {
+const handleSubmitForm = async () => {
   v$.value.$validate();
   if (!v$.value.$error) {
-    handleLogin();
+    await userStore.signIn(form.value.email, form.value.password);
   }
 };
 </script>
