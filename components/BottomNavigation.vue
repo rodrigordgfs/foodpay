@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-row w-full items-center justify-around border-t border-zinc-400 fixed bottom-0 py-1"
+    class="flex flex-row w-full items-center justify-around border-t border-zinc-400 fixed bottom-0 py-2"
   >
     <div
       class="group flex flex-col items-center text-zinc-800 rounded-lg p-1 w-20 hover:bg-orange-500 hover:text-white transition-all"
