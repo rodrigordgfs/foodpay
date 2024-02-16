@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
+        montserrat: ["Montserrat Alternates", "sans-serif"],
       },
       spacing: {
         container: "70rem",

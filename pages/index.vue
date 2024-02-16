@@ -2,7 +2,7 @@
   <div
     class="w-full h-screen bg-orange-500 flex flex-col items-center justify-center px-10 gap-4"
   >
-    <img src="/logo-white.png" class="max-w-[300px] w-full" />
+    <p class="font-montserrat font-bold text-white text-7xl">FoodPay</p>
     <Icon name="line-md:loading-loop" color="#FFF" size="30" />
   </div>
 </template>
