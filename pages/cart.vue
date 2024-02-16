@@ -1,5 +1,8 @@
 <template>
-  <div class="flex flex-col w-full h-screen px-2 mb-64 pt-20 gap-4">
+  <div
+    v-if="cart.length > 0"
+    class="flex flex-col w-full h-screen px-2 mb-64 pt-20 gap-4"
+  >
     <div class="grid grid-cols-1 gap-2">
       <div
         v-for="item in cart"
@@ -88,6 +91,17 @@
         Realizar pedido
       </button>
     </div>
+  </div>
+  <div
+    v-else
+    class="flex flex-col w-full h-screen pt-20 items-center justify-center"
+  >
+    <Icon
+      name="material-symbols:remove-shopping-cart"
+      size="64"
+      class="text-orange-500"
+    />
+    <p class="text-lg font-semibold">Seu carrinho está vazio</p>
   </div>
 </template>
 
