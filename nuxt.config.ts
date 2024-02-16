@@ -7,7 +7,13 @@ export default defineNuxtConfig({
     "@": path.resolve(__dirname, "./"),
     "~": path.resolve(__dirname, "./"),
   },
-  modules: ["nuxt-icon", "@nuxtjs/supabase", "@pinia/nuxt", "@nuxt/image"],
+  modules: [
+    "nuxt-icon",
+    "@nuxtjs/supabase",
+    "@pinia/nuxt",
+    "@nuxt/image",
+    "@pinia-plugin-persistedstate/nuxt",
+  ],
   runtimeConfig: {
     public: {
       bucketUrl: process.env.BUCKET_URL,

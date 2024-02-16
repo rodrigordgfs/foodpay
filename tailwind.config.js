@@ -13,7 +13,10 @@ module.exports = {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
       },
+      spacing: {
+        container: "70rem",
+      },
     },
   },
   plugins: [],
-}
+};

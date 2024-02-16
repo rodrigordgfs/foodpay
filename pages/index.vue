@@ -8,9 +8,15 @@
 </template>
 
 <script setup>
+definePageMeta({
+  name: "Splashscreen",
+});
+
+const router = useRouter();
+
 onMounted(() => {
   setTimeout(() => {
-    console.log("Mounted");
+    router.push({ name: "Login" });
   }, 3000);
 });
 </script>
