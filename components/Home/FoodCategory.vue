@@ -8,7 +8,7 @@
         Ver todos
       </button>
     </div>
-    <div class="grid grid-cols-3 gap-2 w-full">
+    <div class="grid grid-cols-4 gap-2 w-full">
       <div
         v-for="offer in categories"
         :key="offer"
@@ -17,7 +17,7 @@
         <img
           :src="offer.image"
           alt="offer.title"
-          class="rounded-t-lg object-cover h-24"
+          class="rounded-t-lg object-cover max-h-16 h-full"
         />
         <h3 class="text-xs font-semibold text-center p-2 text-white">
           {{ offer.title }}
@@ -43,6 +43,11 @@ const categories = ref([
     title: "Sushi",
     image:
       "https://img.freepik.com/fotos-gratis/prato-de-sushi-fresco-nigiri-sashimi-e-maki-gerados-por-ia_188544-13381.jpg",
+  },
+  {
+    title: "Frango Frito",
+    image:
+      "https://img.freepik.com/fotos-gratis/frango-frito-crocante-em-um-prato-com-salada-e-cenoura_1150-20212.jpg",
   },
 ]);
 </script>
