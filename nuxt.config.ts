@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxt/image",
     "@pinia-plugin-persistedstate/nuxt",
+    "@vite-pwa/nuxt"
   ],
   runtimeConfig: {
     public: {
@@ -30,6 +31,32 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "FoodPay",
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1, maximum-scale=1",
     },
   },
+  pwa: {
+    manifest: {
+      name: "FoodPay",
+      short_name: "FoodPay",
+      description: "A maneira mais fácil de pagar por suas delícias favoritas!",
+      theme_color: "#000000",
+      icons: [
+        {
+          src: "pwa-192x192.png",
+          sizes: "192x192",
+          type: "image/png",
+        },
+        {
+          src: "pwa-512x512.png",
+          sizes: "512x512",
+          type: "image/png",
+        },
+      ],
+    },
+    devOptions: {
+      enabled: true,
+      type: "module",
+    },
+  }
 });
