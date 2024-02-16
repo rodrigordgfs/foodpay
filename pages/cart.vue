@@ -1,12 +1,12 @@
 <template>
   <div class="flex items-center justify-center w-full h-screen pb-[57px]">
-    HOME
+    CART
   </div>
 </template>
 
 <script setup>
 definePageMeta({
-  name: "Home",
+  name: "Cart",
   layout: "authenticated",
 });
 </script>

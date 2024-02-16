@@ -1,12 +1,12 @@
 <template>
   <div class="flex items-center justify-center w-full h-screen pb-[57px]">
-    HOME
+    FAVORITE
   </div>
 </template>
 
 <script setup>
 definePageMeta({
-  name: "Home",
+  name: "Favorite",
   layout: "authenticated",
 });
 </script>
