@@ -18,5 +18,5 @@ export const useCalculateDistance = (lat1, lon1, lat2, lon2) => {
     return distance;
   };
 
-  return Number(getDistanceFromLatLonInKm()).toFixed(2);
+  return Number(getDistanceFromLatLonInKm()).toFixed(1);
 };
