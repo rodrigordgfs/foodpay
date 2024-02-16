@@ -3,9 +3,7 @@ import { defineStore } from "pinia";
 export const useUserStore = defineStore("user", {
   id: "useUserStore",
   persist: true,
-  state: () => ({
-    user: null,
-  }),
+  state: () => ({}),
   actions: {
     async login(email, password) {
       const client = useSupabaseClient();
@@ -39,8 +37,6 @@ export const useUserStore = defineStore("user", {
         alert(error.message);
         return;
       }
-
-      this.user = data;
 
       router.push({
         name: "Home",

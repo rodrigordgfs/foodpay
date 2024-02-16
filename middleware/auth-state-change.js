@@ -5,12 +5,10 @@ export default defineNuxtRouteMiddleware((to, from) => {
 
   client.auth.onAuthStateChange((event, session) => {
     if (event === "SIGNED_IN") {
-      userStore.user = session.user;
       router.push({
         name: "Home",
       });
     } else if (event === "SIGNED_OUT") {
-      userStore.user = null;
       router.push({
         name: "Login",
       });

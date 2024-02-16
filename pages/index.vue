@@ -12,11 +12,16 @@ definePageMeta({
   name: "Splashscreen",
 });
 
+const user = useSupabaseUser();
 const router = useRouter();
 
 onMounted(() => {
   setTimeout(() => {
-    router.push({ name: "Login" });
+    if (user.value) {
+      router.push({ name: "Home" });
+    } else {
+      router.push({ name: "Login" });
+    }
   }, 3000);
 });
 </script>

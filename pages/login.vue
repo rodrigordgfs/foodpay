@@ -140,6 +140,7 @@ definePageMeta({
 });
 
 const userStore = useUserStore();
+const user = useSupabaseUser();
 const router = useRouter();
 
 const form = ref({
@@ -170,6 +171,12 @@ const rules = computed(() => {
 });
 
 const v$ = useVuelidate(rules, form);
+
+onBeforeMount(() => {
+  if (user.value) {
+    router.push({ name: "Home" });
+  }
+});
 
 const handleSubmitForm = async () => {
   v$.value.$validate();
