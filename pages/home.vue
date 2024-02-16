@@ -45,8 +45,8 @@
     </div>
 
     <HomeSpecialOffers />
-
     <HomeFoodCategory />
+    <HomePopularFood />
   </div>
 </template>
 
