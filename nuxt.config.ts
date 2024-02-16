@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxt/image",
     "@pinia-plugin-persistedstate/nuxt",
-    "@vite-pwa/nuxt"
+    "@vite-pwa/nuxt",
   ],
   runtimeConfig: {
     public: {
@@ -36,6 +36,7 @@ export default defineNuxtConfig({
     },
   },
   pwa: {
+    selfDestroying: true,
     manifest: {
       name: "FoodPay",
       short_name: "FoodPay",
@@ -58,5 +59,5 @@ export default defineNuxtConfig({
       enabled: true,
       type: "module",
     },
-  }
+  },
 });
