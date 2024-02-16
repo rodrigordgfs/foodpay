@@ -183,7 +183,7 @@
         >
           <Icon
             v-if="isSubmitting"
-            name="eos-icons:bubble-loading"
+            name="line-md:loading-loop"
             color="#FFF"
             size="24"
           />
