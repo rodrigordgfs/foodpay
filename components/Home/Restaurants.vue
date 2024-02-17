@@ -71,7 +71,7 @@
 <script setup>
 const rastaurants = ref([
   {
-    title: "Burger kING",
+    title: "Burger King",
     image:
       "https://logosmarcas.net/wp-content/uploads/2020/10/Burger-King-Logo-1999-2021.jpg",
     rate: 4,
@@ -87,7 +87,7 @@ const rastaurants = ref([
     longitude: -51.8205924,
   },
   {
-    title: "Burger kING",
+    title: "Burger King",
     image:
       "https://logosmarcas.net/wp-content/uploads/2020/10/Burger-King-Logo-1999-2021.jpg",
     rate: 4,
@@ -103,7 +103,7 @@ const rastaurants = ref([
     longitude: -51.8166442,
   },
   {
-    title: "Burger kING",
+    title: "Burger King",
     image:
       "https://logosmarcas.net/wp-content/uploads/2020/10/Burger-King-Logo-1999-2021.jpg",
     rate: 4,
@@ -119,12 +119,28 @@ const rastaurants = ref([
     longitude: -51.8141122,
   },
   {
-    title: "Burger kING",
+    title: "Burger King",
     image:
       "https://logosmarcas.net/wp-content/uploads/2020/10/Burger-King-Logo-1999-2021.jpg",
     rate: 4,
     latitude: -30.8459092,
     longitude: -51.8115373,
+  },
+  {
+    title: "McDonald's",
+    image:
+      "https://designportugal.net/wp-content/uploads/2016/04/m-mcdonalds.jpg",
+    rate: 4,
+    latitude: -30.8630406,
+    longitude: -51.8205924,
+  },
+  {
+    title: "Burger King",
+    image:
+      "https://logosmarcas.net/wp-content/uploads/2020/10/Burger-King-Logo-1999-2021.jpg",
+    rate: 4,
+    latitude: -30.8503925,
+    longitude: -51.8303005,
   },
 ]);
 
