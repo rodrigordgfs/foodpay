@@ -21,7 +21,6 @@ export const useUserStore = defineStore("user", {
 
     async register(name, email, password) {
       const client = useSupabaseClient();
-      const router = useRouter();
 
       const { data, error } = await client.auth.signUp({
         email,
@@ -37,10 +36,6 @@ export const useUserStore = defineStore("user", {
         alert(error.message);
         return;
       }
-
-      router.push({
-        name: "Home",
-      });
     },
   },
 });

@@ -1,7 +1,5 @@
 <template>
-  <div class="flex items-center justify-center w-full h-screen pb-[65px]">
-    FAVORITE
-  </div>
+  <div class="flex flex-col w-full h-screen px-2 mb-20 pt-20 gap-4"></div>
 </template>
 
 <script setup>

@@ -293,6 +293,7 @@ const handleSubmitForm = async () => {
       form.value.email,
       form.value.password
     );
+    await userStore.login(form.value.email, form.value.password);
     isSubmitting.value = false;
   }
 };
