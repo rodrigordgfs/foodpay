@@ -35,7 +35,6 @@
       </div>
     </div>
 
-    <HomeSpecialOffers />
     <HomeFoodCategory />
     <HomePopularFood />
     <HomeRestaurants />
