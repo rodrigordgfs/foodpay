@@ -5,12 +5,12 @@
         <img
           v-if="fileDisplay"
           :src="fileDisplay"
-          class="w-36 h-36 rounded-full ring-2 ring-orange-500 shadow"
+          class="w-36 h-36 rounded-full ring-2 ring-orange-500 shadow object-cover"
         />
         <img
           v-else-if="image"
           :src="image"
-          class="w-36 h-36 rounded-full ring-2 ring-orange-500 shadow"
+          class="w-36 h-36 rounded-full ring-2 ring-orange-500 shadow object-cover"
         />
         <div
           v-else
