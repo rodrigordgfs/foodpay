@@ -11,7 +11,7 @@
     </div>
     <div class="grid grid-cols-3 gap-2 w-full mb-20">
       <LoaderSkeleton
-        v-if="restaurant.restaurantLoading"
+        v-if="loadingRestaurant"
         v-for="index in 3"
         :key="index"
         class="h-[144px] w-full"
@@ -28,22 +28,26 @@
 
 <script setup>
 const router = useRouter();
-const restaurant = useRestaurantStore();
+const runtimeConfig = useRuntimeConfig();
 
 const restaurants = ref([]);
+const loadingRestaurant = ref(true);
 
-onBeforeMount(() => {
-  try {
-    restaurant.getRestaurants();
-  } catch (error) {
-    console.log(error);
+const getRestaurant = async () => {
+  loadingRestaurant.value = true;
+  const response = await $fetch("/restaurant", {
+    baseURL: runtimeConfig.public.apiUrl,
+    method: "GET",
+  });
+
+  if (response) {
+    restaurants.value = response;
   }
-});
+  loadingRestaurant.value = false;
+};
 
 onMounted(() => {
-  watchEffect(() => {
-    restaurants.value = restaurant.restaurants;
-  });
+  getRestaurant();
 });
 
 const handleGoToAllRestaurants = () => {

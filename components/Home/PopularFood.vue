@@ -9,20 +9,27 @@
       </button>
     </div>
     <div class="grid grid-cols-3 gap-2 w-full">
+      <LoaderSkeleton
+        v-if="loadingFoods"
+        v-for="index in 3"
+        :key="index"
+        class="h-[130px] w-full"
+      />
       <div
+        v-else
         v-for="food in foods"
         :key="food"
         class="shadow flex flex-col rounded-lg cursor-pointer"
       >
         <div class="relative flex flex-col">
           <img
-            :src="food.image"
+            :src="runtimeConfig.public.bucketUrl + '/' + food.image"
             alt="offer.title"
             class="rounded-t-lg object-cover h-24"
           />
         </div>
         <div class="flex flex-col p-2 gap-1">
-          <h3 class="text-xs font-semibold text-center">{{ food.title }}</h3>
+          <h3 class="text-xs font-semibold text-center">{{ food.name }}</h3>
           <div
             class="flex flex-row items-center justify-between text-xs font-semibold"
           >
@@ -45,32 +52,27 @@
 </template>
 
 <script setup>
-const foods = shallowRef([
-  {
-    title: "Hot Supreme",
-    image:
-      "https://img.freepik.com/fotos-gratis/rolos-de-sushi-servidos-com-molho-e-gergelim_141793-1276.jpg",
-    price: 34.5,
-    rate: 4,
-    time: 20,
-  },
-  {
-    title: "Tábua Variada",
-    image:
-      "https://img.freepik.com/fotos-gratis/bandeja-de-aperitivo-gourmet-rustica-pao-queijo-prosciutto-uvas-geradas-por-ia_188544-13391.jpg",
-    price: 75.0,
-    rate: 5,
-    time: 40,
-  },
-  {
-    title: "Pizza Portuguesa",
-    image:
-      "https://img.freepik.com/fotos-gratis/close-up-em-uma-deliciosa-pizza_23-2150852081.jpg",
-    price: 59.99,
-    rate: 4.5,
-    time: 30,
-  },
-]);
+const runtimeConfig = useRuntimeConfig();
+
+const foods = ref([]);
+const loadingFoods = ref(true);
+
+const getProducts = async () => {
+  loadingFoods.value = true;
+  const response = await $fetch("/product", {
+    baseURL: runtimeConfig.public.apiUrl,
+    method: "GET",
+  });
+
+  if (response) {
+    foods.value = response;
+  }
+  loadingFoods.value = false;
+};
+
+onMounted(() => {
+  getProducts();
+});
 </script>
 
 <style></style>
