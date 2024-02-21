@@ -196,7 +196,9 @@ const name = computed(() => {
 
 const image = computed(() => {
   return user?.value?.user_metadata?.image
-    ? runtimeConfig.public.bucketUrl + user?.value?.user_metadata?.image
+    ? runtimeConfig.public.bucketUrl +
+        "/user/" +
+        user?.value?.user_metadata?.image
     : null;
 });
 

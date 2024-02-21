@@ -45,7 +45,7 @@
 </template>
 
 <script setup>
-const foods = ref([
+const foods = shallowRef([
   {
     title: "Hot Supreme",
     image:

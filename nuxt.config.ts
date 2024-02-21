@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     public: {
       bucketUrl: process.env.BUCKET_URL,
       opencageApiKey: process.env.OPENCAGE_API_KEY,
+      apiUrl: process.env.API_URL
     },
   },
   postcss: {
