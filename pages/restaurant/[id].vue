@@ -28,7 +28,7 @@
     <div v-else class="flex flex-row items-center justify-between mt-5 mb-2">
       <h1 class="font-bold text-3xl">{{ restaurant.name }}</h1>
       <div
-        class="border border-zinc-400 rounded-lg px-2 py-1 flex flex-row items-center gap-2"
+        class="border border-zinc-300 rounded-lg px-2 py-1 flex flex-row items-center gap-2"
       >
         <div class="relative w-3 h-3">
           <div
@@ -36,7 +36,7 @@
           />
           <div class="relative rounded-full h-3 w-3 bg-green-500" />
         </div>
-        <p>Aberto</p>
+        <p class="text-sm text-orange-500">Aberto</p>
       </div>
     </div>
 
@@ -54,13 +54,13 @@
           size="20"
           class="text-orange-500"
         />
-        <p class="text-lg font-medium">
+        <p class="text-base">
           {{
             useCalculateDistance(
               currentLatitude,
               currentLongitude,
-              -30.8630406,
-              -51.8205924
+              restaurant.latitude,
+              restaurant.longitude
             )
           }}
           km de distância
@@ -76,11 +76,8 @@
     </div>
 
     <LoaderSkeleton v-if="loadingRestaurant" class="w-full h-[120px]" />
-    <p v-else>
-      Laborum et sunt tempor duis ullamco amet deserunt do incididunt ea magna
-      est. Amet duis nisi consectetur pariatur exercitation est anim dolore
-      consectetur pariatur veniam laboris exercitation. Sit officia laborum
-      occaecat minim deserunt culpa ex et aute cillum.
+    <p v-else class="text-zinc-800">
+      {{ restaurant.description }}
     </p>
 
     <div v-if="loadingRestaurant" class="flex flex-col gap-2 w-full mt-4">
@@ -104,20 +101,18 @@
         v-if="restaurant.categories.length > 0"
         :tabs="restaurant.categories"
       >
-        <template v-slot:0>
-          <p>Conteúdo da Tab 1</p>
-        </template>
-        <template v-slot:1>
-          <p>Conteúdo da Tab 2</p>
-        </template>
-        <template v-slot:2>
-          <p>Conteúdo da Tab 3</p>
-        </template>
-        <template v-slot:3>
-          <p>Conteúdo da Tab 4</p>
-        </template>
-        <template v-slot:4>
-          <p>Conteúdo da Tab 5</p>
+        <template
+          v-for="(category, index) in restaurant.categories"
+          :key="category.id"
+          v-slot:[index]
+        >
+          <div class="grid grid-cols-3 gap-2 w-full">
+            <CardFood
+              v-for="food in category.products"
+              :key="food"
+              :food="food"
+            />
+          </div>
         </template>
       </tabs>
     </div>
