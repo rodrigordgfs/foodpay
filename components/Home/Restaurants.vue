@@ -12,7 +12,7 @@
     <div class="grid grid-cols-3 gap-2 w-full mb-20">
       <LoaderSkeleton
         v-if="loadingRestaurant"
-        v-for="index in 3"
+        v-for="index in 9"
         :key="index"
         class="h-[144px] w-full"
       />
@@ -38,6 +38,9 @@ const getRestaurant = async () => {
   const response = await $fetch("/restaurant", {
     baseURL: runtimeConfig.public.apiUrl,
     method: "GET",
+    params: {
+      limit: 9,
+    },
   });
 
   if (response) {

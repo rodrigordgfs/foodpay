@@ -47,6 +47,9 @@ definePageMeta({
   layout: "authenticated",
 });
 
+const user = useSupabaseUser();
+console.log('user', user.value.id);
+
 const search = ref("");
 </script>
 

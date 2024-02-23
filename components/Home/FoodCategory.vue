@@ -45,10 +45,7 @@ const getCategories = async () => {
   loadingCategories.value = true;
   const response = await $fetch("/categorie", {
     baseURL: runtimeConfig.public.apiUrl,
-    method: "GET",
-    params: {
-      limit: 6,
-    },
+    method: "GET"
   });
 
   if (response) {
