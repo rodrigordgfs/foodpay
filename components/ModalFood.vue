@@ -22,13 +22,13 @@
               <!-- <Icon name="material-symbols:favorite" size="24" class="text-orange-500" /> -->
             </div>
             <div
-              class="group absolute top-2 right-2 rounded-lg p-2 h-10 2-10 flex items-center justify-center shadow-md transition-all cursor-pointer"
+              class="group absolute bg-white top-2 right-2 rounded-lg p-2 h-10 2-10 flex items-center justify-center shadow-md transition-all cursor-pointer hover:bg-orange-500"
               @click="modalFood.toggleModal"
             >
               <Icon
                 name="ic:outline-close"
                 size="24"
-                class="text-white transition-all group-hover:text-orange-500"
+                class="text-orange-500 transition-all group-hover:text-white"
               />
             </div>
           </div>

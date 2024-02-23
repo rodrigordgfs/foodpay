@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-full h-calc(100%-30px) px-2 pt-20">
+  <div class="flex flex-col w-full h-calc(100%-30px) px-2 py-20">
     <LoaderSkeleton v-if="loadingRestaurant" class="w-full h-52" />
     <div v-else class="flex flex-row w-full relative">
       <img
