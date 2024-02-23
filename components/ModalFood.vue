@@ -88,16 +88,9 @@
           <p class="text-sm">{{ modalFood.food.description }}</p>
           <button
             class="w-full text-white bg-orange-500 py-3 rounded-lg hover:bg-orange-600 transition-all font-semibold disabled:opacity-50 disabled:cursor-not-allowed mt-5"
-            type="submit"
-            :disabled="isSubmitting"
+            @click="handleAddToCart"
           >
-            <Icon
-              v-if="isSubmitting"
-              name="line-md:loading-loop"
-              color="#FFF"
-              size="24"
-            />
-            <div v-else class="flex flex-row items-center gap-2 justify-center">
+            <div class="flex flex-row items-center gap-2 justify-center">
               <Icon
                 name="material-symbols:shopping-cart-outline"
                 color="#FFF"
@@ -114,12 +107,13 @@
 
 <script setup>
 import { OnClickOutside } from "@vueuse/components";
+import { v4 as uuidv4 } from "uuid";
 
 const modalFood = useModalFoodStore();
+const cartStore = useCartStore();
 const runtimeConfig = useRuntimeConfig();
 
 const quantity = ref(1);
-const isSubmitting = ref(false);
 
 const increaseQuantity = () => {
   quantity.value++;
@@ -129,6 +123,20 @@ const decreseQuantity = () => {
   if (quantity.value > 1) {
     quantity.value--;
   }
+};
+
+const handleAddToCart = () => {
+  cartStore.addToCart({
+    id: uuidv4(),
+    quantity: quantity.value,
+    name: modalFood.food.name,
+    price: modalFood.food.price,
+    image: modalFood.food.image,
+    rate: modalFood.food.rate,
+    time: modalFood.food.time,
+  });
+  quantity.value = 1;
+  modalFood.toggleModal();
 };
 </script>
 
