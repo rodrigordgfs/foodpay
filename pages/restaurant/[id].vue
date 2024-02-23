@@ -7,12 +7,12 @@
         class="w-full rounded-lg h-52 shadow object-cover"
       />
       <div
-        class="absolute top-2 right-2 bg-white rounded-lg p-2 h-10 2-10 flex items-center justify-center shadow"
+        class="group absolute top-2 right-2 bg-white rounded-lg p-2 h-10 2-10 flex items-center justify-center shadow hover:bg-orange-500 transition-all cursor-pointer"
       >
         <Icon
           name="material-symbols:favorite-outline"
           size="24"
-          class="text-orange-500"
+          class="text-orange-500 group-hover:text-white transition-all"
         />
         <!-- <Icon name="material-symbols:favorite" size="24" class="text-orange-500" /> -->
       </div>

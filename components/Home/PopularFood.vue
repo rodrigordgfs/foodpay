@@ -4,6 +4,7 @@
       <h2 class="text-lg font-bold">Comidas Populares</h2>
       <button
         class="text-zinc-500 rounded-lg py-1 px-3 font-semibold text-sm hover:text-orange-500 transition-all"
+        @click="handleGoToProducts"
       >
         Ver todos
       </button>
@@ -22,6 +23,7 @@
 
 <script setup>
 const runtimeConfig = useRuntimeConfig();
+const router = useRouter();
 
 const foods = ref([]);
 const loadingFoods = ref(true);
@@ -31,6 +33,10 @@ const getProducts = async () => {
   const response = await $fetch("/product", {
     baseURL: runtimeConfig.public.apiUrl,
     method: "GET",
+    params: {
+      highlight: true,
+      limit: 3,
+    },
   });
 
   if (response) {
@@ -42,6 +48,12 @@ const getProducts = async () => {
 onMounted(() => {
   getProducts();
 });
+
+const handleGoToProducts = () => {
+  router.push({
+    name: "Products",
+  });
+};
 </script>
 
 <style></style>

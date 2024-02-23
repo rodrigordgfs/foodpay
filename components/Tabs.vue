@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="flex flex-row gap-2 overflow-x-auto overflow-hidden mt-2 px-1 bg-orange-500 rounded-lg"
+      class="flex flex-row gap-2 overflow-x-auto mt-2 px-1 bg-orange-500 rounded-lg"
     >
       <div
         v-for="(tab, index) in tabs"

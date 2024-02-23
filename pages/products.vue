@@ -1,46 +1,44 @@
 <template>
   <div class="grid grid-cols-3 gap-2 w-full h-calc(100%-30px) px-2 pt-20 mb-20">
     <LoaderSkeleton
-      v-if="loadingRestaurants"
+      v-if="loadingFoods"
       v-for="index in 30"
       :key="index"
       class="h-[144px] w-full"
     />
-    <CardRestaurant
-      v-else
-      v-for="restaurant in restaurants"
-      :key="restaurant"
-      :restaurant="restaurant"
-    />
+    <CardFood v-else v-for="food in foods" :key="food" :food="food" />
   </div>
 </template>
 
 <script setup>
 definePageMeta({
-  name: "Restaurants",
+  name: "Products",
   layout: "authenticated",
 });
 
 const runtimeConfig = useRuntimeConfig();
 
-const restaurants = ref([]);
-const loadingRestaurants = ref(true);
+const foods = ref([]);
+const loadingFoods = ref(true);
 
-const getRestaurants = async () => {
-  loadingRestaurants.value = true;
-  const response = await $fetch("/restaurant", {
+const getProducts = async () => {
+  loadingFoods.value = true;
+  const response = await $fetch("/product", {
     baseURL: runtimeConfig.public.apiUrl,
     method: "GET",
+    params: {
+      highlight: true,
+    },
   });
 
   if (response) {
-    restaurants.value = response;
+    foods.value = response;
   }
-  loadingRestaurants.value = false;
+  loadingFoods.value = false;
 };
 
 onMounted(() => {
-  getRestaurants();
+  getProducts();
 });
 </script>
 
