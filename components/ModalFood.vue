@@ -128,6 +128,7 @@ const decreseQuantity = () => {
 const handleAddToCart = () => {
   cartStore.addToCart({
     id: uuidv4(),
+    productId: modalFood.food.id,
     quantity: quantity.value,
     name: modalFood.food.name,
     price: modalFood.food.price,

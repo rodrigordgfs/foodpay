@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="cartStore.cartTotalItems > 0"
-    class="flex flex-col w-full h-screen px-2 mb-64 pt-20 gap-4"
+    class="flex flex-col w-full h-screen px-2 mb-20 pt-20 gap-4"
   >
     <div class="grid grid-cols-1 gap-2">
       <CardCart v-for="item in cartStore.cart" :key="item" :cart="item" />

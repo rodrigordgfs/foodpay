@@ -13,7 +13,12 @@
         class="text-white group-hover:text-orange-600 transition-all"
       />
     </div>
-    <p class="font-montserrat py-4 font-bold text-white text-2xl">FoodPay</p>
+    <div class="flex flex-col py-2 items-center">
+      <p class="font-montserrat font-bold text-white text-2xl">FoodPay</p>
+      <p class="font-montserrat font-bold text-white text-sm">
+        {{ route.name }}
+      </p>
+    </div>
     <div
       class="group w-10 h-10 flex items-center justify-center rounded-full hover:bg-orange-500 transition-all"
     >
