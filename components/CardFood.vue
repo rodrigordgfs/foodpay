@@ -1,5 +1,8 @@
 <template>
-  <div class="shadow flex flex-col rounded-lg cursor-pointer">
+  <div
+    class="shadow flex flex-col rounded-lg cursor-pointer"
+    @click="handleOpenFood"
+  >
     <div class="relative flex flex-col">
       <img
         :src="runtimeConfig.public.bucketUrl + '/' + food.image"
@@ -30,6 +33,12 @@ const props = defineProps({
 });
 
 const runtimeConfig = useRuntimeConfig();
+const modalFood = useModalFoodStore();
+
+const handleOpenFood = () => {
+  modalFood.toggleModal();
+  modalFood.setFood(props.food);
+};
 </script>
 
 <style></style>
