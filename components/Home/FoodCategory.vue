@@ -46,6 +46,9 @@ const getCategories = async () => {
   const response = await $fetch("/categorie", {
     baseURL: runtimeConfig.public.apiUrl,
     method: "GET",
+    params: {
+      limit: 6,
+    },
   });
 
   if (response) {
