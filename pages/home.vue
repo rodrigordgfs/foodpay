@@ -35,7 +35,7 @@
       </div>
     </div>
 
-    <HomeFoodCategory />
+    <!-- <HomeFoodCategory /> -->
     <HomePopularFood />
     <HomeRestaurants />
   </div>

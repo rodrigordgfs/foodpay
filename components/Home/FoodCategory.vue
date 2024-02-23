@@ -19,7 +19,7 @@
         v-else
         v-for="categorie in categories"
         :key="categorie"
-        class="shadow flex flex-col rounded-lg border-4 border-orange-500 bg-orange-500 cursor-pointer"
+        class="shadow-md flex flex-col rounded-lg border-4 border-orange-500 bg-orange-500 cursor-pointer"
       >
         <img
           :src="runtimeConfig.public.bucketUrl + '/' + categorie.image"

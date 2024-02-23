@@ -4,15 +4,15 @@
     class="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center"
   >
     <OnClickOutside @trigger="modalFood.toggleModal">
-      <div class="bg-white shadow p-2 m-5 rounded-2xl">
+      <div class="bg-white shadow-md p-2 m-5 rounded-2xl">
         <div class="flex flex-col">
           <div class="flex flex-row relative rounded-lg">
             <img
               :src="runtimeConfig.public.bucketUrl + '/' + modalFood.food.image"
-              class="rounded-tl-lg rounded-tr-lg w-96 h-40 shadow object-cover"
+              class="rounded-tl-lg rounded-tr-lg w-96 h-40 shadow-md object-cover"
             />
             <div
-              class="group absolute top-2 left-2 bg-white rounded-lg p-2 h-10 2-10 flex items-center justify-center shadow hover:bg-orange-500 transition-all cursor-pointer"
+              class="group absolute top-2 left-2 bg-white rounded-lg p-2 h-10 2-10 flex items-center justify-center shadow-md hover:bg-orange-500 transition-all cursor-pointer"
             >
               <Icon
                 name="material-symbols:favorite-outline"
@@ -22,7 +22,7 @@
               <!-- <Icon name="material-symbols:favorite" size="24" class="text-orange-500" /> -->
             </div>
             <div
-              class="group absolute top-2 right-2 rounded-lg p-2 h-10 2-10 flex items-center justify-center shadow transition-all cursor-pointer"
+              class="group absolute top-2 right-2 rounded-lg p-2 h-10 2-10 flex items-center justify-center shadow-md transition-all cursor-pointer"
               @click="modalFood.toggleModal"
             >
               <Icon

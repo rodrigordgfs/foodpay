@@ -4,10 +4,10 @@
     <div v-else class="flex flex-row w-full relative">
       <img
         :src="runtimeConfig.public.bucketUrl + '/' + restaurant.image"
-        class="w-full rounded-lg h-52 shadow object-cover"
+        class="w-full rounded-lg h-52 shadow-md object-cover"
       />
       <div
-        class="group absolute top-2 right-2 bg-white rounded-lg p-2 h-10 2-10 flex items-center justify-center shadow hover:bg-orange-500 transition-all cursor-pointer"
+        class="group absolute top-2 right-2 bg-white rounded-lg p-2 h-10 2-10 flex items-center justify-center shadow-md hover:bg-orange-500 transition-all cursor-pointer"
       >
         <Icon
           name="material-symbols:favorite-outline"

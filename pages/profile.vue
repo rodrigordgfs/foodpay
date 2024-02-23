@@ -5,16 +5,16 @@
         <img
           v-if="fileDisplay"
           :src="fileDisplay"
-          class="w-36 h-36 rounded-full ring-2 ring-orange-500 shadow object-cover"
+          class="w-36 h-36 rounded-full ring-2 ring-orange-500 shadow-md object-cover"
         />
         <img
           v-else-if="image"
           :src="image"
-          class="w-36 h-36 rounded-full ring-2 ring-orange-500 shadow object-cover"
+          class="w-36 h-36 rounded-full ring-2 ring-orange-500 shadow-md object-cover"
         />
         <div
           v-else
-          class="w-36 h-36 rounded-full ring-2 ring-orange-500 shadow flex justify-center items-center bg-orange-600 uppercase text-white text-4xl"
+          class="w-36 h-36 rounded-full ring-2 ring-orange-500 shadow-md flex justify-center items-center bg-orange-600 uppercase text-white text-4xl"
         >
           {{ initialsName }}
         </div>

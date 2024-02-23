@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed w-full bg-orange-500 shadow flex flex-row items-center justify-between px-2 z-50"
+    class="fixed w-full bg-orange-500 shadow-md flex flex-row items-center justify-between px-2 z-50"
   >
     <div
       class="group w-10 h-10 flex items-center justify-center rounded-full hover:bg-orange-500 transition-all"

@@ -4,7 +4,7 @@
       <div
         v-for="favorite in favorites"
         :key="favorite"
-        class="shadow flex flex-row gap-2 rounded-lg items-center p-2"
+        class="shadow-md flex flex-row gap-2 rounded-lg items-center p-2"
       >
         <img
           :src="favorite.image"

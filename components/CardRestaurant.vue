@@ -1,7 +1,7 @@
 <template>
   <div
     :key="restaurant"
-    class="shadow flex flex-col rounded-lg cursor-pointer"
+    class="shadow-md flex flex-col rounded-lg cursor-pointer"
     @click="handleGoToRestaurant(restaurant.id)"
   >
     <img

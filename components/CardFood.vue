@@ -1,6 +1,6 @@
 <template>
   <div
-    class="shadow flex flex-col rounded-lg cursor-pointer"
+    class="shadow-md flex flex-col rounded-lg cursor-pointer"
     @click="handleOpenFood"
   >
     <div class="relative flex flex-col">
