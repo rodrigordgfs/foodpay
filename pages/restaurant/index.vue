@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex flex-col w-full h-calc(100%-30px) items-center px-2 pt-20 mb-20"
-  >
+  <div class="flex flex-col w-full h-calc(100%-30px) items-center px-2 pt-20">
     <div class="grid grid-cols-3 max-w-container w-full gap-2">
       <LoaderSkeleton
         v-if="loadingRestaurants"

@@ -33,7 +33,7 @@
           />
         </label>
       </div>
-      <h1 class="text-2xl font-bold mt-4">{{ name }}</h1>
+      <h1 class="text-2xl font-bold mt-4 dark:text-zinc-200">{{ name }}</h1>
       <p class="text-zinc-500 text-lg font-medium">{{ email }}</p>
     </div>
     <ul class="my-5 flex flex-col w-full items-center justify-center gap-3">
@@ -41,119 +41,119 @@
         <Icon
           name="material-symbols:favorite-outline"
           size="26"
-          class="text-zinc-800 group-hover:text-orange-500 transition-all"
+          class="text-zinc-800 dark:text-zinc-200 group-hover:text-orange-500 transition-all"
         />
         <p
-          class="flex-1 font-semibold text-xl mb-1 w-48 group-hover:text-orange-500 transition-all"
+          class="flex-1 font-semibold text-xl mb-1 w-48 group-hover:text-orange-500 dark:text-zinc-200 transition-all"
         >
           Favoritos
         </p>
         <Icon
           name="material-symbols:arrow-forward-ios"
           size="22"
-          class="text-zinc-800 group-hover:text-orange-500 transition-all"
+          class="text-zinc-800 dark:text-zinc-200 group-hover:text-orange-500 transition-all"
         />
       </li>
       <li class="group flex flex-row items-center gap-3">
         <Icon
           name="material-symbols:edit-square-outline"
           size="26"
-          class="text-zinc-800 group-hover:text-orange-500 transition-all"
+          class="text-zinc-800 dark:text-zinc-200 group-hover:text-orange-500 transition-all"
         />
         <p
-          class="flex-1 font-semibold text-xl mb-1 w-48 group-hover:text-orange-500 transition-all"
+          class="flex-1 font-semibold text-xl mb-1 w-48 group-hover:text-orange-500 dark:text-zinc-200 transition-all"
         >
           Editar Perfil
         </p>
         <Icon
           name="material-symbols:arrow-forward-ios"
           size="22"
-          class="text-zinc-800 group-hover:text-orange-500 transition-all"
+          class="text-zinc-800 dark:text-zinc-200 group-hover:text-orange-500 transition-all"
         />
       </li>
       <li class="group flex flex-row items-center gap-3">
         <Icon
           name="material-symbols:add-notes-outline"
           size="26"
-          class="text-zinc-800 group-hover:text-orange-500 transition-all"
+          class="text-zinc-800 dark:text-zinc-200 group-hover:text-orange-500 transition-all"
         />
         <p
-          class="flex-1 font-semibold text-xl mb-1 w-48 group-hover:text-orange-500 transition-all"
+          class="flex-1 font-semibold text-xl mb-1 w-48 group-hover:text-orange-500 dark:text-zinc-200 transition-all"
         >
           Histórico de Pedidos
         </p>
         <Icon
           name="material-symbols:arrow-forward-ios"
           size="22"
-          class="text-zinc-800 group-hover:text-orange-500 transition-all"
+          class="text-zinc-800 dark:text-zinc-200 group-hover:text-orange-500 transition-all"
         />
       </li>
       <li class="group flex flex-row items-center gap-3">
         <Icon
           name="ic:outline-payments"
           size="26"
-          class="text-zinc-800 group-hover:text-orange-500 transition-all"
+          class="text-zinc-800 dark:text-zinc-200 group-hover:text-orange-500 transition-all"
         />
         <p
-          class="flex-1 font-semibold text-xl mb-1 w-48 group-hover:text-orange-500 transition-all"
+          class="flex-1 font-semibold text-xl mb-1 w-48 group-hover:text-orange-500 dark:text-zinc-200 transition-all"
         >
           Pagamentos
         </p>
         <Icon
           name="material-symbols:arrow-forward-ios"
           size="22"
-          class="text-zinc-800 group-hover:text-orange-500 transition-all"
+          class="text-zinc-800 dark:text-zinc-200 group-hover:text-orange-500 transition-all"
         />
       </li>
       <li class="group flex flex-row items-center gap-3">
         <Icon
           name="material-symbols:settings-rounded"
           size="26"
-          class="text-zinc-800 group-hover:text-orange-500 transition-all"
+          class="text-zinc-800 dark:text-zinc-200 group-hover:text-orange-500 transition-all"
         />
         <p
-          class="flex-1 font-semibold text-xl mb-1 w-48 group-hover:text-orange-500 transition-all"
+          class="flex-1 font-semibold text-xl mb-1 w-48 group-hover:text-orange-500 dark:text-zinc-200 transition-all"
         >
           Configurações
         </p>
         <Icon
           name="material-symbols:arrow-forward-ios"
           size="22"
-          class="text-zinc-800 group-hover:text-orange-500 transition-all"
+          class="text-zinc-800 dark:text-zinc-200 group-hover:text-orange-500 transition-all"
         />
       </li>
       <li class="group flex flex-row items-center gap-3">
         <Icon
           name="material-symbols:help-center-outline"
           size="26"
-          class="text-zinc-800 group-hover:text-orange-500 transition-all"
+          class="text-zinc-800 dark:text-zinc-200 group-hover:text-orange-500 transition-all"
         />
         <p
-          class="flex-1 font-semibold text-xl mb-1 w-48 group-hover:text-orange-500 transition-all"
+          class="flex-1 font-semibold text-xl mb-1 w-48 group-hover:text-orange-500 dark:text-zinc-200 transition-all"
         >
           Ajuda
         </p>
         <Icon
           name="material-symbols:arrow-forward-ios"
           size="22"
-          class="text-zinc-800 group-hover:text-orange-500 transition-all"
+          class="text-zinc-800 dark:text-zinc-200 group-hover:text-orange-500 transition-all"
         />
       </li>
       <li class="group flex flex-row items-center gap-3">
         <Icon
           name="simple-icons:aboutdotme"
           size="26"
-          class="text-zinc-800 group-hover:text-orange-500 transition-all"
+          class="text-zinc-800 dark:text-zinc-200 group-hover:text-orange-500 transition-all"
         />
         <p
-          class="flex-1 font-semibold text-xl mb-1 w-48 group-hover:text-orange-500 transition-all"
+          class="flex-1 font-semibold text-xl mb-1 w-48 group-hover:text-orange-500 dark:text-zinc-200 transition-all"
         >
           Sobre Nós
         </p>
         <Icon
           name="material-symbols:arrow-forward-ios"
           size="22"
-          class="text-zinc-800 group-hover:text-orange-500 transition-all"
+          class="text-zinc-800 dark:text-zinc-200 group-hover:text-orange-500 transition-all"
         />
       </li>
     </ul>
@@ -164,10 +164,10 @@
       <Icon
         name="material-symbols:logout-sharp"
         size="26"
-        class="text-zinc-800 group-hover:text-orange-500 transition-all"
+        class="text-zinc-800 dark:text-zinc-200 group-hover:text-orange-500 transition-all"
       />
       <p
-        class="font-semibold text-xl mb-1 w-56 group-hover:text-orange-500 transition-all"
+        class="font-semibold text-xl mb-1 w-56 group-hover:text-orange-500 dark:text-zinc-200 transition-all"
       >
         Sair
       </p>

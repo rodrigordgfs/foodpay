@@ -7,14 +7,16 @@
         size="24"
       />
       <p
-        class="text-sm font-medium overflow-x-auto overflow-ellipsis dark:text-zinc-100"
+        class="text-sm font-medium overflow-x-auto overflow-ellipsis dark:text-zinc-200"
       >
         {{ userLoocation }}
       </p>
     </div>
     <div v-else class="flex flex-row items-center gap-1">
       <Icon name="line-md:loading-loop" class="text-orange-500" size="24" />
-      <p class="text-sm font-medium">Carregando localização ...</p>
+      <p class="text-sm font-medium dark:text-zinc-200">
+        Carregando localização ...
+      </p>
     </div>
   </div>
 </template>

@@ -8,7 +8,7 @@
           class="w-full rounded-lg h-52 shadow-md object-cover"
         />
         <div
-          class="group absolute top-2 right-2 bg-white rounded-lg p-2 h-10 2-10 flex items-center justify-center shadow-md hover:bg-orange-500 transition-all cursor-pointer"
+          class="group absolute top-2 right-2 bg-white dark:bg-zinc-900 rounded-lg p-2 h-10 2-10 flex items-center justify-center shadow-md hover:bg-orange-500 dark:hover:bg-orange-500 transition-all cursor-pointer"
           @click="toggleFavorite"
         >
           <Icon
@@ -40,9 +40,11 @@
         <LoaderSkeleton class="w-[90px] h-[35px]" />
       </div>
       <div v-else class="flex flex-row items-center justify-between mt-5 mb-2">
-        <h1 class="font-bold text-3xl">{{ restaurant.name }}</h1>
+        <h1 class="font-bold text-3xl dark:text-zinc-200">
+          {{ restaurant.name }}
+        </h1>
         <div
-          class="border border-zinc-300 rounded-lg px-2 py-1 flex flex-row items-center gap-2"
+          class="border border-zinc-300 dark:border-zinc-600 rounded-lg px-2 py-1 flex flex-row items-center gap-2"
         >
           <div class="relative w-3 h-3">
             <div
@@ -68,7 +70,7 @@
             size="20"
             class="text-orange-500"
           />
-          <p class="text-base">
+          <p class="text-base dark:text-zinc-200">
             {{
               useCalculateDistance(
                 currentLatitude,
@@ -110,7 +112,7 @@
       </div>
 
       <LoaderSkeleton v-if="loadingRestaurant" class="w-full h-[120px]" />
-      <p v-else class="text-zinc-800">
+      <p v-else class="text-zinc-800 dark:text-zinc-400">
         {{ restaurant.description }}
       </p>
 

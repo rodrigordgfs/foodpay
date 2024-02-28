@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex flex-col w-full h-full items-center px-2 pt-16 bg-white dark:bg-zinc-800"
-  >
+  <div class="flex flex-col w-full h-full items-center px-2 pt-16">
     <div class="max-w-container w-full">
       <div class="flex flex-col w-full items-center justify-between py-2">
         <LocationSearch />

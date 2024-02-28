@@ -9,16 +9,16 @@
           <CardCart v-for="item in cartStore.cart" :key="item" :cart="item" />
         </div>
         <div
-          class="fixed bottom-1 right-0 left-0 px-2 w-full flex flex-col pb-20 pt-2 gap-2 bg-white"
+          class="fixed bottom-1 right-0 left-0 px-2 w-full flex flex-col pb-20 pt-2 gap-2 bg-white dark:bg-zinc-800"
         >
           <div class="flex flex-row items-center justify-between">
-            <p class="text-lg font-semibold">
+            <p class="text-lg font-semibold dark:text-zinc-200">
               Total
               <span class="text-base"
                 >({{ cartStore.cartTotalItems }} items)</span
               >
             </p>
-            <p class="font-bold text-xl">
+            <p class="font-bold text-xl dark:text-zinc-200">
               {{ useFormatMoney(cartStore.cartTotal) }}
             </p>
           </div>

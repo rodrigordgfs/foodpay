@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex flex-col w-full h-screen items-center px-2 pt-20 pb-20 gap-4"
-  >
+  <div class="flex flex-col w-full h-screen items-center px-2 pt-20 gap-4">
     <div class="max-w-container w-full">
       <div
         class="grid grid-cols-3 gap-2"
@@ -15,7 +13,7 @@
       </div>
       <div>
         <div v-if="productsFavorites.length > 0" class="mb-4">
-          <p class="font-semibold text-lg">Comidas</p>
+          <p class="font-semibold text-lg dark:text-zinc-200">Comidas</p>
           <div class="grid grid-cols-3 gap-2">
             <CardFood
               v-for="item in productsFavorites"
@@ -25,7 +23,7 @@
           </div>
         </div>
         <div v-if="restaurantsFavorites.length > 0">
-          <p class="font-semibold text-lg">Restaurantes</p>
+          <p class="font-semibold text-lg dark:text-zinc-200">Restaurantes</p>
           <div class="grid grid-cols-3 gap-2">
             <CardRestaurant
               v-for="item in restaurantsFavorites"
