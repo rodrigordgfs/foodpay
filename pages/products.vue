@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col w-full h-calc(100%-30px) items-center px-2 pt-20">
-    <div class="grid grid-cols-3 gap-2 max-w-container w-full">
+    <div class="grid grid-cols-3 md:grid-cols-6 gap-2 max-w-container w-full">
       <LoaderSkeleton
         v-if="loadingFoods"
         v-for="index in 30"
