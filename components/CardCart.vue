@@ -1,5 +1,5 @@
 <template>
-  <div class="shadow-md flex flex-row gap-2 rounded-lg items-center p-2">
+  <div class="shadow-md flex flex-row gap-2 rounded-lg items-center p-2 bg-zinc-50">
     <div class="flex flex-col gap-2">
       <img
         :src="runtimeConfig.public.bucketUrl + '/' + cart.image"

@@ -9,7 +9,7 @@
         Ver todos
       </button>
     </div>
-    <div class="grid grid-cols-3 gap-2 w-full mb-20">
+    <div class="grid grid-cols-3 md:grid-cols-6 gap-2 w-full mb-20">
       <LoaderSkeleton
         v-if="loadingRestaurant"
         v-for="index in 9"

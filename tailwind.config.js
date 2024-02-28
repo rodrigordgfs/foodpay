@@ -15,7 +15,7 @@ module.exports = {
         montserrat: ["Montserrat Alternates", "sans-serif"],
       },
       spacing: {
-        container: "70rem",
+        container: "64rem",
       },
     },
   },

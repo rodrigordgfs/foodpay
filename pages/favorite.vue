@@ -1,72 +1,76 @@
 <template>
-  <div class="flex flex-col w-full h-screen px-2 pb-50 pt-20 gap-4">
-    <div class="grid grid-cols-1 gap-2">
-      <div
-        v-for="favorite in favorites"
-        :key="favorite"
-        class="shadow-md flex flex-row gap-2 rounded-lg items-center p-2"
-      >
-        <img
-          :src="favorite.image"
-          class="h-24 w-40 object-cover rounded-tl-lg rounded-bl-lg"
-        />
-        <div class="flex-1 flex flex-col">
-          <p class="font-bold text-lg">{{ favorite.title }}</p>
-          <div class="flex flex-row items-center gap-1">
-            <Icon
-              name="material-symbols:alarm"
-              class="text-zinc-600"
-              size="16"
-            />
-            <p>{{ favorite.time }} min</p>
+  <div
+    class="flex flex-col w-full h-screen items-center px-2 pb-50 pt-20 gap-4"
+  >
+    <div class="max-w-container w-full">
+      <div class="grid grid-cols-1 gap-2">
+        <div
+          v-for="favorite in favorites"
+          :key="favorite"
+          class="shadow-md flex flex-row gap-2 rounded-lg items-center p-2"
+        >
+          <img
+            :src="favorite.image"
+            class="h-24 w-40 object-cover rounded-tl-lg rounded-bl-lg"
+          />
+          <div class="flex-1 flex flex-col">
+            <p class="font-bold text-lg">{{ favorite.title }}</p>
+            <div class="flex flex-row items-center gap-1">
+              <Icon
+                name="material-symbols:alarm"
+                class="text-zinc-600"
+                size="16"
+              />
+              <p>{{ favorite.time }} min</p>
+            </div>
+            <p class="font-semibold">{{ useFormatMoney(favorite.price) }}</p>
+            <div class="flex flex-row">
+              <Icon
+                name="material-symbols:star"
+                size="16"
+                class="text-orange-500"
+              />
+              <Icon
+                name="material-symbols:star"
+                size="16"
+                class="text-orange-500"
+              />
+              <Icon
+                name="material-symbols:star"
+                size="16"
+                class="text-orange-500"
+              />
+              <Icon
+                name="material-symbols:star"
+                size="16"
+                class="text-orange-500"
+              />
+              <Icon
+                name="material-symbols:star"
+                size="16"
+                class="text-orange-500"
+              />
+            </div>
           </div>
-          <p class="font-semibold">{{ useFormatMoney(favorite.price) }}</p>
-          <div class="flex flex-row">
-            <Icon
-              name="material-symbols:star"
-              size="16"
-              class="text-orange-500"
-            />
-            <Icon
-              name="material-symbols:star"
-              size="16"
-              class="text-orange-500"
-            />
-            <Icon
-              name="material-symbols:star"
-              size="16"
-              class="text-orange-500"
-            />
-            <Icon
-              name="material-symbols:star"
-              size="16"
-              class="text-orange-500"
-            />
-            <Icon
-              name="material-symbols:star"
-              size="16"
-              class="text-orange-500"
-            />
-          </div>
-        </div>
-        <div class="flex flex-col items-center justify-between">
-          <div
-            class="w-10 h-10 rounded-lg flex items-center justify-center p-2 hover:bg-orange-500"
-          >
-            <Icon
-              name="material-symbols:delete-sharp"
-              class="text-zinc-600 hover:text-white transition-all cursor-pointer"
-              size="24"
-            />
-          </div>
-          <div
-            class="w-10 h-10 rounded-lg flex items-center justify-center p-2 hover:bg-orange-500"
-          >
-            <Icon
-              name="material-symbols:shopping-cart-outline"
-              class="text-zinc-600 hover:text-white transition-all cursor-pointer"
-              size="24"
-            />
+          <div class="flex flex-col items-center justify-between">
+            <div
+              class="w-10 h-10 rounded-lg flex items-center justify-center p-2 hover:bg-orange-500"
+            >
+              <Icon
+                name="material-symbols:delete-sharp"
+                class="text-zinc-600 hover:text-white transition-all cursor-pointer"
+                size="24"
+              />
+            </div>
+            <div
+              class="w-10 h-10 rounded-lg flex items-center justify-center p-2 hover:bg-orange-500"
+            >
+              <Icon
+                name="material-symbols:shopping-cart-outline"
+                class="text-zinc-600 hover:text-white transition-all cursor-pointer"
+                size="24"
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -9,10 +9,10 @@
         Ver todos
       </button>
     </div>
-    <div class="grid grid-cols-3 gap-2 w-full">
+    <div class="grid grid-cols-3 md:grid-cols-6 items-center gap-2 w-full">
       <LoaderSkeleton
         v-if="loadingFoods"
-        v-for="index in 3"
+        v-for="index in 6"
         :key="index"
         class="h-[130px] w-full"
       />
@@ -35,7 +35,7 @@ const getProducts = async () => {
     method: "GET",
     params: {
       highlight: true,
-      limit: 3,
+      limit: 6,
     },
   });
 

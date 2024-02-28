@@ -1,12 +1,16 @@
 <template>
-  <div class="grid grid-cols-3 gap-2 w-full h-calc(100%-30px) px-2 pt-20 mb-20">
-    <LoaderSkeleton
-      v-if="loadingFoods"
-      v-for="index in 30"
-      :key="index"
-      class="h-[144px] w-full"
-    />
-    <CardFood v-else v-for="food in foods" :key="food" :food="food" />
+  <div
+    class="grid grid-cols-3 gap-2 w-full h-calc(100%-30px) items-center px-2 pt-20 mb-20"
+  >
+    <div class="max-w-container w-full">
+      <LoaderSkeleton
+        v-if="loadingFoods"
+        v-for="index in 30"
+        :key="index"
+        class="h-[144px] w-full"
+      />
+      <CardFood v-else v-for="food in foods" :key="food" :food="food" />
+    </div>
   </div>
 </template>
 
