@@ -1,9 +1,9 @@
 <template>
   <div class="w-full flex flex-col mt-4 gap-1">
     <div class="flex flex-row items-center justify-between">
-      <h2 class="text-lg font-bold">Comidas Populares</h2>
+      <h2 class="text-lg font-bold dark:text-zinc-200">Comidas Populares</h2>
       <button
-        class="text-zinc-500 rounded-lg py-1 px-3 font-semibold text-sm hover:text-orange-500 transition-all"
+        class="text-zinc-500 dark:text-zinc-200 rounded-lg py-1 px-3 font-semibold text-sm hover:text-orange-500 transition-all"
         @click="handleGoToProducts"
       >
         Ver todos

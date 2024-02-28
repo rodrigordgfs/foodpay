@@ -20,12 +20,20 @@
       </p>
     </div>
     <div
-      class="group w-10 h-10 flex items-center justify-center rounded-full hover:bg-orange-500 transition-all"
+      class="group w-10 h-10 flex items-center justify-center rounded-full transition-all"
+      @click="useDarkMode.toggleDarkMode()"
     >
       <Icon
-        name="material-symbols:notifications"
+        v-if="!useDarkMode.isDarkModeEnabled"
+        name="material-symbols:light-mode"
         size="24"
-        class="text-white group-hover:text-orange-600 transition-all"
+        class="text-white transition-all"
+      />
+      <Icon
+        v-if="useDarkMode.isDarkModeEnabled"
+        name="material-symbols:dark-mode"
+        size="24"
+        class="text-white transition-all"
       />
     </div>
   </div>
@@ -34,6 +42,7 @@
 <script setup>
 const route = useRoute();
 const router = useRouter();
+const useDarkMode = useDarkModeStore();
 
 const back = () => {
   if (route.name === "Home") {

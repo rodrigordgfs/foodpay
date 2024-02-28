@@ -1,7 +1,7 @@
 <template>
   <div
     :key="restaurant"
-    class="shadow-md flex flex-col rounded-lg cursor-pointer bg-zinc-50"
+    class="shadow-md flex flex-col rounded-lg cursor-pointer bg-zinc-50 dark:bg-zinc-900"
     @click="handleGoToRestaurant(restaurant.id)"
   >
     <img
@@ -9,13 +9,13 @@
       alt="restaurant.title"
       class="rounded-t-lg object-cover h-24"
     />
-    <h3 class="text-xs font-semibold text-center pt-2 px-2">
+    <h3 class="text-xs font-semibold text-center pt-2 px-2 dark:text-zinc-200">
       {{ restaurant.name }}
     </h3>
     <div
       class="flex flex-row items-center justify-between gap-1 text-xs px-2 pb-2"
     >
-      <p>
+      <p class="dark:text-zinc-200">
         {{
           useCalculateDistance(
             currentLatitude,

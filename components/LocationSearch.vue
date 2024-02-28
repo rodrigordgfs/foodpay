@@ -6,7 +6,9 @@
         class="text-orange-500"
         size="24"
       />
-      <p class="text-sm font-medium overflow-x-auto overflow-ellipsis">
+      <p
+        class="text-sm font-medium overflow-x-auto overflow-ellipsis dark:text-zinc-100"
+      >
         {{ userLoocation }}
       </p>
     </div>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="shadow-md flex flex-col rounded-lg cursor-pointer bg-zinc-50"
+    class="shadow-md flex flex-col rounded-lg cursor-pointer bg-zinc-50 dark:bg-zinc-900"
     @click="handleOpenFood"
   >
     <div class="relative flex flex-col">
@@ -11,16 +11,22 @@
       />
     </div>
     <div class="flex flex-col p-2 gap-1">
-      <h3 class="text-xs font-semibold text-center">{{ food.name }}</h3>
+      <h3 class="text-xs font-semibold text-center dark:text-zinc-200">
+        {{ food.name }}
+      </h3>
       <div
         class="flex flex-row items-center justify-between text-xs font-semibold"
       >
-        <p>
+        <p class="dark:text-zinc-200">
           {{ useFormatMoney(food.price) }}
         </p>
         <div class="flex flex-row items-center">
-          <Icon name="material-symbols:alarm" class="text-zinc-600" size="14" />
-          <p>{{ food.time }} min</p>
+          <Icon
+            name="material-symbols:alarm"
+            class="text-zinc-600 dark:text-zinc-400"
+            size="14"
+          />
+          <p class="dark:text-zinc-200">{{ food.time }} min</p>
         </div>
       </div>
     </div>

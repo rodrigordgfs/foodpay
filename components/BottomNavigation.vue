@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-row w-full items-center justify-around border-t bg-white border-zinc-400 fixed bottom-0 py-2"
+    class="flex flex-row w-full items-center justify-around border-t bg-white dark:bg-zinc-900 border-zinc-400 fixed bottom-0 py-2"
   >
     <div
       class="group flex flex-col items-center text-zinc-800 rounded-lg p-1 w-20 hover:bg-orange-500 hover:text-white transition-all"
@@ -9,11 +9,14 @@
       <Icon
         name="ci:home-outline"
         size="24"
-        :class="{ 'text-orange-500 group-hover:text-white': isHome }"
+        class="dark:text-zinc-200"
+        :class="{ 'text-orange-500 group-hover:text-zinc-200': isHome }"
       />
       <p
-        class="font-semibold text-sm"
-        :class="{ 'text-orange-500 font-bold group-hover:text-white': isHome }"
+        class="font-semibold text-sm dark:text-zinc-200"
+        :class="{
+          'text-orange-500 font-bold group-hover:text-zinc-200': isHome,
+        }"
       >
         Início
       </p>
@@ -25,11 +28,14 @@
       <Icon
         name="material-symbols:shopping-cart-outline"
         size="24"
-        :class="{ 'text-orange-500 group-hover:text-white': isCart }"
+        class="dark:text-zinc-200"
+        :class="{ 'text-orange-500 group-hover:text-zinc-200': isCart }"
       />
       <p
-        class="font-semibold text-sm"
-        :class="{ 'text-orange-500 font-bold group-hover:text-white': isCart }"
+        class="font-semibold text-sm dark:text-zinc-200"
+        :class="{
+          'text-orange-500 font-bold group-hover:text-zinc-200': isCart,
+        }"
       >
         Carrinho
       </p>
@@ -41,12 +47,13 @@
       <Icon
         name="material-symbols:favorite-outline"
         size="24"
-        :class="{ 'text-orange-500 group-hover:text-white': isFavorite }"
+        class="dark:text-zinc-200"
+        :class="{ 'text-orange-500 group-hover:text-zinc-200': isFavorite }"
       />
       <p
-        class="font-semibold text-sm"
+        class="font-semibold text-sm dark:text-zinc-200"
         :class="{
-          'text-orange-500 font-bold group-hover:text-white': isFavorite,
+          'text-orange-500 font-bold group-hover:text-zinc-200': isFavorite,
         }"
       >
         Favorito
@@ -59,12 +66,13 @@
       <Icon
         name="material-symbols:person-outline"
         size="24"
-        :class="{ 'text-orange-500 group-hover:text-white': isProfile }"
+        class="dark:text-zinc-200"
+        :class="{ 'text-orange-500 group-hover:text-zinc-200': isProfile }"
       />
       <p
-        class="font-semibold text-sm"
+        class="font-semibold text-sm dark:text-zinc-200"
         :class="{
-          'text-orange-500 font-bold group-hover:text-white': isProfile,
+          'text-orange-500 font-bold group-hover:text-zinc-200': isProfile,
         }"
       >
         Perfil

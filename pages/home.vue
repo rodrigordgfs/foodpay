@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-col w-full h-screen items-center px-2 pt-16">
+  <div
+    class="flex flex-col w-full h-full items-center px-2 pt-16 bg-white dark:bg-zinc-800"
+  >
     <div class="max-w-container w-full">
       <div class="flex flex-col w-full items-center justify-between py-2">
         <LocationSearch />
@@ -18,7 +20,7 @@
               />
               <input
                 type="text"
-                class="flex-1 bg-transparent outline-none h-10 placeholder:text-zinc-500 text-sm"
+                class="flex-1 bg-transparent outline-none h-10 placeholder:text-zinc-500 dark:placeholder:text-zinc-200 text-sm"
                 placeholder="Procure por comida ou restaurante"
                 v-model="search"
               />
