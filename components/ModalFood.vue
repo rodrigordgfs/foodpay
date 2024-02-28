@@ -13,13 +13,26 @@
             />
             <div
               class="group absolute top-2 left-2 bg-white rounded-lg p-2 h-10 2-10 flex items-center justify-center shadow-md hover:bg-orange-500 transition-all cursor-pointer"
+              @click="toggleFavorite"
             >
               <Icon
+                v-if="favoriting"
+                name="line-md:loading-loop"
+                size="24"
+                class="text-orange-500 group-hover:text-white transition-all cursor-not-allowed"
+              />
+              <Icon
+                v-else-if="!isFavorite"
                 name="material-symbols:favorite-outline"
                 size="24"
                 class="text-orange-500 group-hover:text-white transition-all"
               />
-              <!-- <Icon name="material-symbols:favorite" size="24" class="text-orange-500" /> -->
+              <Icon
+                v-else
+                name="material-symbols:favorite"
+                size="24"
+                class="text-orange-500 group-hover:text-white transition-all"
+              />
             </div>
             <div
               class="group absolute bg-white top-2 right-2 rounded-lg p-2 h-10 2-10 flex items-center justify-center shadow-md transition-all cursor-pointer hover:bg-orange-500"
@@ -112,8 +125,20 @@ import { v4 as uuidv4 } from "uuid";
 const modalFood = useModalFoodStore();
 const cartStore = useCartStore();
 const runtimeConfig = useRuntimeConfig();
+const user = useSupabaseUser();
 
 const quantity = ref(1);
+const favoriting = ref(false);
+const isFavorite = ref(false);
+
+watch(
+  () => modalFood.showModal,
+  () => {
+    if (modalFood.showModal) {
+      findFavorite();
+    }
+  }
+);
 
 const increaseQuantity = () => {
   quantity.value++;
@@ -138,6 +163,40 @@ const handleAddToCart = () => {
   });
   quantity.value = 1;
   modalFood.toggleModal();
+};
+
+const findFavorite = async () => {
+  favoriting.value = true;
+  const response = await $fetch(
+    `/product/${modalFood.food.id}/favorite/${user.value.id}`,
+    {
+      baseURL: runtimeConfig.public.apiUrl,
+      method: "GET",
+    }
+  );
+
+  if (response?.id) {
+    isFavorite.value = true;
+  } else {
+    isFavorite.value = false;
+  }
+  favoriting.value = false;
+};
+
+const toggleFavorite = async () => {
+  favoriting.value = true;
+  const response = await $fetch(
+    `/product/${modalFood.food.id}/favorite/${user.value.id}`,
+    {
+      baseURL: runtimeConfig.public.apiUrl,
+      method: "POST",
+      body: {},
+    }
+  );
+  if (response) {
+    isFavorite.value = !isFavorite.value;
+  }
+  favoriting.value = false;
 };
 </script>
 

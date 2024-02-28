@@ -25,6 +25,9 @@ export const useCartStore = defineStore("cart", {
       const index = this.cart.indexOf(item);
       this.cart[index].quantity++;
     },
+    clearCart() {
+      this.cart = [];
+    },
   },
   getters: {
     cartTotal() {

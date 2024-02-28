@@ -184,6 +184,7 @@ definePageMeta({
 const runtimeConfig = useRuntimeConfig();
 const client = useSupabaseClient();
 const user = useSupabaseUser();
+const cart = useCartStore();
 const router = useRouter();
 
 const file = ref(null);
@@ -242,6 +243,7 @@ const saveImage = async () => {
 
 const logout = async () => {
   await client.auth.signOut();
+  cart.clearCart();
   router.push({
     name: "Login",
   });
